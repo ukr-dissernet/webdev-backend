@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from os import getuid
+try:
+    from os import getuid
+
+except ImportError:
+    def getuid():
+        return 4000
+
 from flask import Flask
 
 app = Flask(__name__)
