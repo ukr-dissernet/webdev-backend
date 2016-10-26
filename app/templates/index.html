@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Cross-lingual Plagiarism Detection on Data of Ukrainian And Russian Language">
+    <meta name="author" content="Yelena Grammatchikova, Lyubov Ivanova">
+    <link rel="icon" href="static/udn.png">
+
+    <title>Проект "Украинский Диссернет" - проверка текстов на плагиат</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/justified-nav.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <h3 style="font-family: Verdana, Arial, Helvetica, sans-serif; color:#603663; font-weight:bold">Украинский Диссернет</h3>
+		<p style="font-style:italic; font-family: Verdana, Arial, Helvetica, sans-serif;">проект по выявлению межъязыкового плагиата в научных текстах на украинском языке</p>
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="#">Главная</a></li>
+            <li><a href="#">О проекте</a></li>
+            <li><a href="#">Проверить на плагиат</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h2 class='headings'>Детектор плагиата</h2>
+        <p class="lead">Наш скрипт переведёт ваш текст на украинском языке в формате "txt" через сервис "Яндекс.Перевод", частично исправит ошибки переводчика и проверит, насколько получившийся документ схож с текстом на русском языке. Проверьте текст на плагиат прямо сейчас.
+        <div class="container">
+        <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="text/plain">
+                <div class="row">
+                  <div class="btn btn-lg">
+                    <input id="file-picker_ukr" type="file" name="file_ukr" accept="text/plain">
+
+                  </div>
+                  <div class="btn btn-lg">
+                    <input id="file-picker_source" type="file" name="file_source" accept="text/plain">
+
+                  </div>
+                </div>
+            <fieldset id="progress" style="display: none">
+                <legend>Загрузка</legend>
+
+                <div class="progress-trough">
+                    <div id="progress-bar" class="progress-bar progress-bar-striped">0%</div>
+                </div>
+
+            </fieldset>
+            <br><div class="row">
+    <div class="col-md-2 col-md-offset-5"><input type="submit" value="Загрузить" id="upload-button" class="btn btn-lg btn-success"></div>
+</div>
+
+        </form>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/uploadr.js') }}"></script>
+
+        </p>
+        
+
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h3 class='headings'>Грядущие усовершенствования</h3>
+          <ul>
+            <li>Возможные усовершенствования алгоритма</li>
+            <li>Предварительная проверка текстов на возможность плагиата (в основном, по совпадениям в названиях глав)</li>
+            <li>Страница для сайта (в разработке)</li>
+          </ul>
+          <p><a class="btn btn-new" href="#" role="button">Подробнее &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h3 class='headings'>Планы на осень</h3>
+          <ul>
+            <li>Усовершенствования алгоритма - идем по пути неполных совпадений. В том числе нежестких совпадений n-граммов</li>
+            <li>Поинтересоваться  у Дани Алексеевского, как выравнивают геномы</li>
+            <li>Работа с композиционными структурами</li>
+            <li>Подготовка к соревнованиям</li>
+          </ul>
+          <p><a class="btn btn-new" href="#" role="button">Подробнее &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h3 class='headings'>Первый скрипт</h3>
+          <p></p>
+          <p><a class="btn btn-new" href="#" role="button">Подробнее &raquo;</a></p>
+        </div>
+      </div>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>Лена Грамматчикова, Любовь Иванова</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
