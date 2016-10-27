@@ -6,8 +6,8 @@ import os
 import io
 import sys
 
-reload(sys)
-sys.setdefaultencoding("utf-8")
+#reload(sys)
+#sys.setdefaultencoding("utf-8")
 
 class PlagResult:
     pl = []
@@ -47,7 +47,7 @@ def orpho(line): #избавляемся от остатков украинск�
 
 def stem(word): #нормализация и стэмы
     word = word.lower()
-    word = word.strip('[()«»“”„=\'",.—%<>-—„”?!:;*]'.decode("UTF-8"))
+    word = word.strip('[()«»“”„=\'",.—%<>-—„”?!:;*]')
     if len(word) > 7:
         stem = word[:-3]
     elif len(word) > 4:

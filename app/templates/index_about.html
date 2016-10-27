@@ -43,20 +43,21 @@
         <nav>
           <ul class="nav nav-justified">
             <li class="active"><a href="{{ url_for('index') }}">Главная</a></li>
-            <li><a href="{{ url_for('about') }}">О проекте</a></li>
+            <li><a href="#">О проекте</a></li>
             <li><a href="{{ url_for('blog') }}">Блог</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
           </ul>
         </nav>
       </div>
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-      <h3 class='headings'>Разработчики:</h3>
-      <p class="lead">
-        <li>Любовь Иванова (luben92@gmail.com) - НИУ ВШЭ</li>
-        <li>Лена Грамматчикова (lengramma@gmail.com) - НИУ ВШЭ</li>
-        <li>Татьяна Свириденко ()</li>
+      <h3 class='headings'>Украинский Диссерет</h3>
+      <p>
+        Задача проекта: алгоритм, сопоставляющий тексты на близкородственных языках (русском и украинском) и выделяющий потенциальный плагиат. Отработка алгоритма на двух-трех известных случаях плагиата.
+		<br>
+		<br>
+		Работа ведётся под руководством М.В. Копотева (Университет Хельсинки)
       </p>
                <p><a class="btn btn-lg" href="{{ url_for('index') }}" role="button">На главную</a></p>
       </div>
