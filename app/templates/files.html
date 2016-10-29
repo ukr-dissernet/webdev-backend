@@ -63,9 +63,16 @@
 			</div>
             <br>
             <hr>
-            {% for d in files.data %}
-                <p style="text-align: left; font-size: 15px;">{{ d }}</p>
-            {% endfor %}
+            <table border="1">
+              {% for d in files.data %}
+                <tr>
+				{% for x in d %}
+					<th>{{ x }}</th>
+				{% endfor %}
+				</tr>
+              {% endfor %}
+			  </table>
+			  <br>
 		<p><a class="btn btn-lg" href="{{ url_for('index') }}" role="button">На главную</a></p>
 		</div>
       <!-- Site footer -->
@@ -77,6 +84,6 @@
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../static/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

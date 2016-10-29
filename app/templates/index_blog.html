@@ -7,22 +7,22 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Cross-lingual Plagiarism Detection on Data of Ukrainian And Russian Language">
     <meta name="author" content="Yelena Grammatchikova, Lyubov Ivanova">
-    <link rel="icon" href="udn.png">
+    <link rel="icon" href="../static/udn.png">
 
     <title>Проект "Украинский Диссернет" - проверка текстов на плагиат</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../static/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="static/blog.css" rel="stylesheet">
-	
+    <link href="../static/justified-nav.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../static/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,12 +49,13 @@
           </ul>
         </nav>
       </div>
+	</div>
 
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+        <h1 class="blog-title">Блог проекта</h1>
+        <p class="lead blog-description">Свежие новости и дальнейшие планы</p>
       </div>
 
       <div class="row">
@@ -62,101 +63,69 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Sample blog post</h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+            <h2 class="blog-post-title">Планы на осень</h2>
+            <p class="blog-post-meta">5 октября, 2016 года, <a href="https://vk.com/lu_be_n">Люба</a></p>
 
-            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-            <hr>
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <h2>Heading</h2>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <pre><code>Example code block</code></pre>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            <ol>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-            </ol>
-            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+            <p>Наши задачи на ближайшее время:</p>
+			<ol>
+				<li>Внести усовершенствования в алгоритм - идём по пути неполных совпадений. В том числе нежестких совпадений n-граммов.</li>
+				<li>Поинтересоваться  у Дани Алексеевского, как выравнивают геномы.</li>
+				<li>Работа с композиционными структурами.</li>
+				<li>Подготовка к соревнованиям.</li>
+			</ol>
+		  </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">Грядущие усовершенствования</h2>
+            <p class="blog-post-meta">20 сентября, 2016 года, <a href="https://vk.com/lengramma">Лена</a></p>
+
+            <p>Мы продолжаем работу над проектом и готовим ряд усовершенствований. В частности, мы планируем скорректировать алгоритм выявления плагиата и заняться предварительной проверкой текстов на возможность плагиата (в основном, по совпадениям в названиях глав).
+			<br>
+			Ждите новостей!
+			<br>
+			(А это, картиночка, чтобы вы не очень скучали:)
+			<img src="../static/pics/infographics.jpg" alt="Степени плагиата" width="100%">
+			</p>
           </div><!-- /.blog-post -->
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Another blog post</h2>
-            <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+            <h2 class="blog-post-title">Скрипт есть!</h2>
+            <p class="blog-post-meta">30 июня, 2016 года <a href="https://vk.com/lu_be_n">Люба</a></p>
 
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Наконец-то мы сделали скрипт и можем на практике посмотреть, как наша система находит плагиат. Вот так, например, простовато, но действенно решается проблема различающихся окончаний в словах:</p>
+			<pre><code>def stem(word): #нормализация и стэмы
+    word = word.lower()
+    word = word.strip('[()«»“”„=\'",.—%<>-—„”?!:;*]')
+    if len(word) > 7:
+        stem = word[:-3]
+    elif len(word) > 4:
+        stem = word[:-2]
+    elif len(word) == 4:
+        stem = word[:-1]
+    else:
+        stem = word
+    return stem</pre></code>
+            <p>Уже сейчас опробовать наш скрипт вы можете <a href="{{ url_for('index') }}"><i>прямо на сайте</i></a>.</p>
           </div><!-- /.blog-post -->
-
-          <div class="blog-post">
-            <h2 class="blog-post-title">New feature</h2>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
-
-          <nav>
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </nav>
 
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <h4>О блоге</h4>
+            <p>Здесь мы делимся нашими последними разработками, прогрессом (и временами случающимся регрессом) проекта, важными деталями и интересной информацией.</p>
           </div>
           <div class="sidebar-module">
-            <h4>Archives</h4>
+            <h4>Архив</h4>
             <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
+              <li><a href="https://hsecompling.wikispaces.com/-/M15-17/ukrnet/home">Учебный год 2015 - 2016</a></li>
             </ol>
           </div>
           <div class="sidebar-module">
-            <h4>Elsewhere</h4>
+            <h4>Где мы есть:</h4>
             <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="https://github.com/ukr-dissernet">GitHub</a></li>
+              <li><a href="https://hsecompling.wikispaces.com/-/M15-17/ukrnet/home">Wiki Page</a></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
@@ -177,8 +146,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../static/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../static/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

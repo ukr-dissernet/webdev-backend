@@ -24,15 +24,15 @@ def contacts():
 @app.route('/index_blog')
 def blog():
     return  render_template("index_blog.html")
-	
+
+@app.route('/index_about')
+def about():
+    return  render_template("index_about.html")
+
 @app.route("/upload", methods=["POST"])
 def upload():
     """Handle the upload of a file."""
     form = request.form
-	
-@app.route('/index_about')
-def about():
-    return  render_template("index_about.html")
 
     # Create a unique "session ID" for this particular batch of uploads.
     upload_key = str(uuid4())
@@ -43,7 +43,7 @@ def about():
         is_ajax = True
 
     # Target folder for these uploads.
-    target = "static/uploads/{}".format(upload_key)
+    target = "app/static/uploads/{}".format(upload_key)
     try:
         os.mkdir(target)
     except:
@@ -86,7 +86,7 @@ def upload_complete(uuid):
     """The location we send them to at the end of the upload."""
 
     # Get their files.
-    root = "static/uploads/{}".format(uuid)
+    root = "app/static/uploads/{}".format(uuid)
     if not os.path.isdir(root):
         return "Error: UUID not found!"
 

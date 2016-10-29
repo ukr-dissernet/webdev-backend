@@ -131,7 +131,12 @@ def project(filepath_ukr, filepath_source):
                     continue
                 else: #цепочка - плагиат
                     #output.append(str(ii - c) + '\t' + plist[ii-c] + '\t' + str(jj - c) + '\t' + slist[jj-c] + '_' + ch)
-                    output.append(str(ii - c) + '\t' + ch + '\t' + str(jj - c) + '\t' + ch1 + '\t' + str(c))
+                    same = []
+                    same.append(str(ii - c))
+                    same.append(ch)
+                    same.append(str(jj - c))
+                    same.append(ch1)
+                    output.append(same)
                     sumC += c
                     break
             j += 1
